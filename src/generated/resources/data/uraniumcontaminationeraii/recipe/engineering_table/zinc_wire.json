@@ -1,0 +1,17 @@
+{
+  "type": "uraniumcontaminationeraii:engineering_table_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "uraniumcontaminationeraii:zinc_rod"
+    }
+  },
+  "pattern": [
+    "R",
+    "R"
+  ],
+  "result": {
+    "count": 2,
+    "id": "uraniumcontaminationeraii:zinc_wire"
+  }
+}

@@ -3,20 +3,20 @@ package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.particles;
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.ModRegistries;
 
 /**
- * 粒子注册聚集类。
+ * Particle registration aggregator class.
  *
- * <p>登记全部 ParticleType;规划条目(设计文档出处):</p>
+ * <p>Registers all ParticleType; planned entries (design doc sources):</p>
  * <ul>
- *   <li>气体闪现粒子(按 19 种气体标识色着色,§13.3.9)</li>
- *   <li>开放空间溢出烟柱(微漏 1 / 常规 2 / 大量 4 / 爆喷 8 条,§13.3.9)</li>
- *   <li>锤子敲击火花 / 骨架成型闪光(§3.2)/ 过载冒烟 / 浓缩机阵列光效</li>
+ *   <li>Gas flash particles (colored by the 19 gas identifier colors, §13.3.9)</li>
+ *   <li>Open-space spill smoke columns (seep 1 / normal 2 / heavy 4 / blowout 8 streams, §13.3.9)</li>
+ *   <li>Hammer strike sparks / skeleton forming flashes (§3.2) / overload smoke / concentrator array glow</li>
  * </ul>
  */
 public final class ModParticles {
     private ModParticles() {}
 
-    /** 由 {@link ModRegistries#register(IEventBus)} 统一调用,请勿单独调用。 */
+    /** Called centrally by {@link ModRegistries#register(IEventBus)}; do not call directly. */
     public static void register() {
-        // TODO 阶段2.3(敲击)/2.5(气体闪现)起登记
+        // TODO register from phase 2.3 (hammer strike) / 2.5 (gas flash) onward
     }
 }

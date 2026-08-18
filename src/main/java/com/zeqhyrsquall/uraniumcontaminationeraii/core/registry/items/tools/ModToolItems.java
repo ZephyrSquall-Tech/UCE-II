@@ -1,28 +1,46 @@
+// Ref: No.02 Item Registration
 package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.tools;
 
+import com.zeqhyrsquall.uraniumcontaminationeraii.content.manualtools.StoneHammerItem;
+import com.zeqhyrsquall.uraniumcontaminationeraii.core.mass.MassComponent;
+import com.zeqhyrsquall.uraniumcontaminationeraii.core.mass.MassTier;
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.ModRegistries;
+import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.datacomponents.ModDataComponents;
+
+import net.minecraft.world.item.Item;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 /**
- * 物品注册·工具类聚集类。
+ * Item registration · tools aggregator class.
  *
- * <p>登记「工具」类别下的全部物品;实例在本类构建,经 {@link ModRegistries#ITEMS} 提交。</p>
+ * <p>Registers all items in the "tools" category; instances are built here and submitted
+ * via {@link ModRegistries#ITEMS}.</p>
  *
- * <p>规划条目(设计文档出处):</p>
+ * <p>Planned entries (design doc sources):</p>
  * <ul>
- *   <li>碎石锤(矿石碎块→矿粒×2~3) —— §〇</li>
- *   <li>四级锤子(木 64 / 铁 300 / 钢 500 / 锆合金 800 耐久) —— §3.3.1</li>
- *   <li>扳手(物流带方向/接口模式/附件拆卸) —— §四/§3.6</li>
- *   <li>万用表(中央控制台/检测仪配对) —— §11.3/§13.9.3</li>
- *   <li>通用蓝图(开局赠送) / 机器蓝图模板 —— §3.1/§3.3.6</li>
- *   <li>手持气体检测仪 —— §13.9.1;辐射扫描仪 —— §七-16 #83;工业诊断终端 —— §七-12 #64</li>
- *   <li>降噪耳机(§11.6) —— 归入装备类亦可,待定</li>
+ *   <li>Stone hammer (ore chunk → 2~3 ore nuggets) — §〇</li>
+ *   <li>Four-tier hammers (wood 64 / iron 300 / steel 500 / zirconium-alloy 800 durability) — §3.3.1</li>
+ *   <li>Wrench (conveyor direction / interface mode / attachment removal) — §4/§3.6</li>
+ *   <li>Multimeter (central console / detector pairing) — §11.3/§13.9.3</li>
+ *   <li>Universal blueprint (starter gift) / machine blueprint template — §3.1/§3.3.6</li>
+ *   <li>Handheld gas detector — §13.9.1; radiation scanner — §7-16 #83; industrial diagnostic terminal — §7-12 #64</li>
+ *   <li>Noise-canceling headphones (§11.6) — may also be classified as gear, TBD</li>
  * </ul>
+ *
+ * <p>M1-A shipped (§〇.1): stone hammer (main hand + off-hand chunk → right-click → 2~3 nuggets, double hunger cost).</p>
  */
 public final class ModToolItems {
     private ModToolItems() {}
 
-    /** 由 {@link ModRegistries#register(IEventBus)} 统一调用,请勿单独调用。 */
+    /** Stone hammer (§〇.1): tier-0 manual tool, standard tier 1.0 kg, no durability (M1-A simplification). */
+    public static final DeferredItem<Item> STONE_HAMMER = ModRegistries.ITEMS.register(
+            "stone_hammer",
+            () -> new StoneHammerItem(new Item.Properties()
+                    .stacksTo(1)
+                    .component(ModDataComponents.MASS.get(), MassComponent.of(MassTier.STANDARD))));
+
+    /** Called centrally by {@link ModRegistries#register(IEventBus)}; do not call directly. */
     public static void register() {
-        // TODO 阶段1/2:注册工具条目
+        // Registration already done via static fields at class load; this method is just an explicit trigger point
     }
 }

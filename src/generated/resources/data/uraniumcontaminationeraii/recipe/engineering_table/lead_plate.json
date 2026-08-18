@@ -1,0 +1,16 @@
+{
+  "type": "uraniumcontaminationeraii:engineering_table_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "uraniumcontaminationeraii:lead_ingot"
+    }
+  },
+  "pattern": [
+    "I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "uraniumcontaminationeraii:lead_plate"
+  }
+}

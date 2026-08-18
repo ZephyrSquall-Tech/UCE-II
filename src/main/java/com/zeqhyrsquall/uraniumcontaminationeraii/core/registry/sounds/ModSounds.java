@@ -3,21 +3,21 @@ package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.sounds;
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.ModRegistries;
 
 /**
- * 音效注册聚集类。
+ * Sound registration aggregator class.
  *
- * <p>登记全部 SoundEvent;规划条目(设计文档出处):</p>
+ * <p>Registers all SoundEvent; planned entries (design doc sources):</p>
  * <ul>
- *   <li>机器运转声——每类机器独有音色(破碎机「咔咔」/离心机「嗡——」/高炉「呼呼」等,§11.6)</li>
- *   <li>锤子敲击骨架声(§3.2)/ 蓝图成型闪光音</li>
- *   <li>气体告警蜂鸣(§13.9)/ 过载电流滋滋声(§1.0.1)</li>
- *   <li>爆炸/熔毁/防爆隔离装置炸毁声(§12.8)</li>
+ *   <li>Machine operation sounds — each machine type has its own timbre (crusher "clack-clack" / centrifuge "hum" / blast furnace "whoosh" etc., §11.6)</li>
+ *   <li>Hammer-on-skeleton sounds (§3.2) / blueprint-forming flash sounds</li>
+ *   <li>Gas alarm buzzers (§13.9) / overload current crackle (§1.0.1)</li>
+ *   <li>Explosion / meltdown / blast isolation device detonation sounds (§12.8)</li>
  * </ul>
  */
 public final class ModSounds {
     private ModSounds() {}
 
-    /** 由 {@link ModRegistries#register(IEventBus)} 统一调用,请勿单独调用。 */
+    /** Called centrally by {@link ModRegistries#register(IEventBus)}; do not call directly. */
     public static void register() {
-        // TODO 阶段2/3c/6:随机器与告警系统登记
+        // TODO phase 2/3c/6: register along with machines and alarm systems
     }
 }

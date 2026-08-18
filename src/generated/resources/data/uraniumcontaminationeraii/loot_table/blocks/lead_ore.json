@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": 1.0,
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "uraniumcontaminationeraii:lead_ore_chunk"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "uraniumcontaminationeraii:blocks/lead_ore"
+}

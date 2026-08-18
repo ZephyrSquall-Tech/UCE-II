@@ -1,0 +1,24 @@
+{
+  "type": "uraniumcontaminationeraii:engineering_table_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "uraniumcontaminationeraii:iron_plate"
+    },
+    "R": {
+      "item": "uraniumcontaminationeraii:iron_rod"
+    },
+    "W": {
+      "item": "uraniumcontaminationeraii:copper_wire"
+    }
+  },
+  "pattern": [
+    "W W",
+    "WRW",
+    " B "
+  ],
+  "result": {
+    "count": 1,
+    "id": "uraniumcontaminationeraii:cti_motor"
+  }
+}

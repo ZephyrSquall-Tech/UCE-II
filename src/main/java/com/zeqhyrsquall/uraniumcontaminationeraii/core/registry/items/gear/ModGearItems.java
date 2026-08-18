@@ -3,25 +3,26 @@ package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.gear;
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.ModRegistries;
 
 /**
- * 物品注册·装备类聚集类。
+ * Item registration · gear aggregator class.
  *
- * <p>登记「装备」类别下的全部物品;实例在本类构建,经 {@link ModRegistries#ITEMS} 提交。</p>
+ * <p>Registers all items in the "gear" category; instances are built here and submitted
+ * via {@link ModRegistries#ITEMS}.</p>
  *
- * <p>规划条目(设计文档出处):</p>
+ * <p>Planned entries (design doc sources):</p>
  * <ul>
- *   <li>科技工程师眼镜(CtII 头盔栏) —— §9.1</li>
- *   <li>环体征监测器(CtII 基础 / CtIII 进阶,胸甲栏) —— §9.2</li>
- *   <li>外骨骼框架(CtIII,腿部增强 + 装甲结构基础) —— §9.3</li>
- *   <li>动力装甲四件套(CtIV,头盔/胸甲/腿甲/靴子) —— §9.4</li>
- *   <li>电池三级(小型 5k / 中型 25k / 大型 100k Ct) —— §1.4.1</li>
- *   <li>降噪耳机(§11.6 声景系统配套) —— 亦可归工具类,待定</li>
+ *   <li>Tech engineer glasses (CtII helmet slot) — §9.1</li>
+ *   <li>Biosign monitor (CtII basic / CtIII advanced, chest slot) — §9.2</li>
+ *   <li>Exoskeleton frame (CtIII, leg enhancement + armor structure base) — §9.3</li>
+ *   <li>Power armor four-piece set (CtIV, helmet/chestplate/leggings/boots) — §9.4</li>
+ *   <li>Three-tier batteries (small 5k / medium 25k / large 100k Ct) — §1.4.1</li>
+ *   <li>Noise-canceling headphones (§11.6 soundscape system accessory) — may also be classified as tools, TBD</li>
  * </ul>
  */
 public final class ModGearItems {
     private ModGearItems() {}
 
-    /** 由 {@link ModRegistries#register(IEventBus)} 统一调用,请勿单独调用。 */
+    /** Called centrally by {@link ModRegistries#register(IEventBus)}; do not call directly. */
     public static void register() {
-        // TODO 阶段3c~4:注册装备条目
+        // TODO phase 3c~4: register gear entries
     }
 }

@@ -1,5 +1,5 @@
 /**
- * 农业与食品工程3台:水耕种植机/工业厨房(1.0)+发酵罐(2.0)。难度★★ P2/P3
- * <p>参考:设计文档 §七-18</p>
+ * Agriculture & food engineering 3 machines: hydroponic planter/industrial kitchen (1.0)+fermentation tank (2.0). Difficulty★★ P2/P3
+ * <p>Ref: design doc §7-18</p>
  */
 package com.zeqhyrsquall.uraniumcontaminationeraii.content.agrifood;

@@ -1,0 +1,23 @@
+{
+  "type": "uraniumcontaminationeraii:engineering_table_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "uraniumcontaminationeraii:tin_plate"
+    },
+    "W": {
+      "item": "uraniumcontaminationeraii:copper_wire"
+    }
+  },
+  "pattern": [
+    "WRW",
+    "WSW"
+  ],
+  "result": {
+    "count": 2,
+    "id": "uraniumcontaminationeraii:electronic_component"
+  }
+}

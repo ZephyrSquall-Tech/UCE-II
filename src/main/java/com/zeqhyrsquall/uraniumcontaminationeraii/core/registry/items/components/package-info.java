@@ -1,5 +1,5 @@
 /**
- * 物品注册·零部件类:马达(4级)、电路板(5级)、线圈/电线、齿轮/轴承/活塞/转子/螺丝、钉子、电子元件、显示屏等。
- * <p>设计文档 §2.2.4/§2.2.5/§3.3.4/§13.9.4;聚集类 {@link com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.components.ModComponentItems}。</p>
+ * Item registration · components: motors (4 tiers), circuit boards (5 tiers), coils/wires, gears/bearings/pistons/rotors/screws, nails, electronic components, displays, etc.
+ * <p>Design doc §2.2.4/§2.2.5/§3.3.4/§13.9.4; aggregator class {@link com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.components.ModComponentItems}.</p>
  */
 package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.components;

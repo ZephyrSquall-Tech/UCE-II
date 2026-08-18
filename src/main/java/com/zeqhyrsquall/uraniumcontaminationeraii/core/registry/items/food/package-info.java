@@ -1,5 +1,5 @@
 /**
- * 物品注册·食物类:工业厨房(#92)产出的高饱食度合成食品、发酵罐(#93)产出的酒精饮品与发酵产物。
- * <p>设计文档 §七-18;聚集类 {@link com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.food.ModFoodItems}。</p>
+ * Item registration · food: high-saturation synthetic food from the industrial kitchen (#92), alcoholic beverages and fermentation products from the fermentation tank (#93).
+ * <p>Design doc §7-18; aggregator class {@link com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.food.ModFoodItems}.</p>
  */
 package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.food;

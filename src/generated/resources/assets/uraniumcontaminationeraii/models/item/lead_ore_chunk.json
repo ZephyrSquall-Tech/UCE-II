@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "uraniumcontaminationeraii:item/lead_ore_chunk"
+  }
+}

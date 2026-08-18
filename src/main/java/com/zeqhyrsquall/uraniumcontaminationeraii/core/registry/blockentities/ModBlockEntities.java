@@ -3,12 +3,13 @@ package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.blockentities;
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.ModRegistries;
 
 /**
- * 方块实体注册聚集类。
+ * Block entity registration aggregator class.
  *
- * <p>登记全部 BlockEntityType;每台机器一个(继承 core/machine 的 AbstractMachineBlockEntity),
- * 物流带/物流接口/管道(2.0)各按需登记。</p>
+ * <p>Registers all BlockEntityType; one per machine (extends AbstractMachineBlockEntity in
+ * core/machine); conveyor belts / logistics interfaces / pipes (2.0) are registered as needed.</p>
  *
- * <p>安全创建模式(方块实体引用方块,必须延迟到方块注册完成之后):</p>
+ * <p>Safe creation pattern (block entities reference blocks, so they must be deferred until
+ * after block registration is complete):</p>
  * <pre>{@code
  * ModRegistries.BLOCK_ENTITIES.register("jaw_crusher",
  *         () -> BlockEntityType.Builder.of(JawCrusherBlockEntity::new, ModMachineBlocks.JAW_CRUSHER.get()).build(null));
@@ -17,8 +18,8 @@ import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.ModRegistries;
 public final class ModBlockEntities {
     private ModBlockEntities() {}
 
-    /** 由 {@link ModRegistries#register(IEventBus)} 统一调用,请勿单独调用。 */
+    /** Called centrally by {@link ModRegistries#register(IEventBus)}; do not call directly. */
     public static void register() {
-        // TODO 阶段2.8(样板机)起随机器登记,示例见类注释
+        // TODO register along with machines from phase 2.8 (sample machine) onward; see class javadoc for example
     }
 }

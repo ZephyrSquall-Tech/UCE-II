@@ -1,0 +1,21 @@
+{
+  "type": "uraniumcontaminationeraii:engineering_table_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "T": {
+      "item": "minecraft:terracotta"
+    }
+  },
+  "pattern": [
+    " T ",
+    "TCT",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "uraniumcontaminationeraii:clay_substrate"
+  }
+}

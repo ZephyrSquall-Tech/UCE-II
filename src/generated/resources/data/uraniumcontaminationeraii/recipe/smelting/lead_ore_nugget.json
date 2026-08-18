@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "lead_ore_nugget",
+  "ingredient": {
+    "item": "uraniumcontaminationeraii:lead_ore_nugget"
+  },
+  "result": {
+    "count": 1,
+    "id": "uraniumcontaminationeraii:lead_ingot"
+  }
+}

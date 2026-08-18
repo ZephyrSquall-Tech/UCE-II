@@ -1,5 +1,5 @@
 /**
- * 终极类6台:地质勘探仪(1.0)/电磁分离器(2.0)/锻造核心/区域熔炼/维度锚点/奇点压缩器(3.0)。难度★★★★★ P4
- * <p>参考:设计文档 §七-20</p>
+ * Ultimate tier 6 machines: geological surveyor (1.0)/electromagnetic separator (2.0)/forging core/zone refining/dimension anchor/singularity compressor (3.0). Difficulty★★★★★ P4
+ * <p>Ref: design doc §7-20</p>
  */
 package com.zeqhyrsquall.uraniumcontaminationeraii.content.ultimate;

@@ -1,0 +1,17 @@
+{
+  "type": "uraniumcontaminationeraii:engineering_table_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "uraniumcontaminationeraii:lead_plate"
+    }
+  },
+  "pattern": [
+    "P",
+    "P"
+  ],
+  "result": {
+    "count": 2,
+    "id": "uraniumcontaminationeraii:lead_rod"
+  }
+}

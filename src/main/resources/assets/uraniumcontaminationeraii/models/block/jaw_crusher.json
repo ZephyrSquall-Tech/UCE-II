@@ -1,0 +1,12 @@
+{
+  "loader": "neoforge:obj",
+  "model": "uraniumcontaminationeraii:models/block/jaw_crusher.obj",
+  "flip_v": true,
+  "automatic_culling": false,
+  "shade_quads": true,
+  "emissive_ambient": true,
+  "textures": {
+    "texture0": "minecraft:block/iron_block",
+    "particle": "minecraft:block/iron_block"
+  }
+}

@@ -3,24 +3,25 @@ package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.blocks.logistic
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.ModRegistries;
 
 /**
- * 方块注册·物流类聚集类。
+ * Block registration · logistics aggregator class.
  *
- * <p>登记物流带系统(设计文档 §四)的全部方块;实例引用 content/logistics 包内的 Block 类。</p>
+ * <p>Registers all blocks of the conveyor belt system (design doc §4); instances reference
+ * Block classes in the content/logistics package.</p>
  *
- * <p>规划条目(设计文档出处):</p>
+ * <p>Planned entries (design doc sources):</p>
  * <ul>
- *   <li>物流带(64 格上限,L 型自然拐弯) —— §4.1</li>
- *   <li>物流接口(输入/输出双模式,扳手切换) —— §4.2</li>
- *   <li>分类方块(T 型岔路分流) —— §4.3</li>
- *   <li>电机四级(基础/改进/高速/涡轮,贴带侧面) —— §4.4</li>
- *   <li>充电停机坪(智能无人机配套) —— §3.5.3</li>
+ *   <li>Conveyor belt (64-slot cap, natural L-shaped turning) — §4.1</li>
+ *   <li>Logistics interface (input/output dual mode, wrench-switchable) — §4.2</li>
+ *   <li>Sorter block (T-junction diverter) — §4.3</li>
+ *   <li>Four-tier motor (basic/improved/high-speed/turbine, side-mounted on belt) — §4.4</li>
+ *   <li>Charging pad (smart drone accessory) — §3.5.3</li>
  * </ul>
  */
 public final class ModLogisticsBlocks {
     private ModLogisticsBlocks() {}
 
-    /** 由 {@link ModRegistries#register(IEventBus)} 统一调用,请勿单独调用。 */
+    /** Called centrally by {@link ModRegistries#register(IEventBus)}; do not call directly. */
     public static void register() {
-        // TODO 阶段2.6:登记物流带系统方块
+        // TODO phase 2.6: register conveyor belt system blocks
     }
 }

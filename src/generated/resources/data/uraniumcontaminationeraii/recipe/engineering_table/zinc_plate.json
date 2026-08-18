@@ -1,0 +1,16 @@
+{
+  "type": "uraniumcontaminationeraii:engineering_table_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "uraniumcontaminationeraii:zinc_ingot"
+    }
+  },
+  "pattern": [
+    "I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "uraniumcontaminationeraii:zinc_plate"
+  }
+}

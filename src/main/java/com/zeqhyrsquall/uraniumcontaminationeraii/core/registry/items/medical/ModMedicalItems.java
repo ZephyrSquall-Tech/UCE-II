@@ -3,21 +3,22 @@ package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.medical;
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.ModRegistries;
 
 /**
- * 物品注册·医疗类聚集类(预留)。
+ * Item registration · medical aggregator class (reserved).
  *
- * <p>登记「医疗」类别下的全部物品;实例在本类构建,经 {@link ModRegistries#ITEMS} 提交。</p>
+ * <p>Registers all items in the "medical" category; instances are built here and submitted
+ * via {@link ModRegistries#ITEMS}.</p>
  *
- * <p>规划条目(待设计文档补充):</p>
+ * <p>Planned entries (pending design doc refinement):</p>
  * <ul>
- *   <li>抗辐射药物(降低辐射剂量/辐照累积) —— 联动 §9.2 环体征监测器与 radiation 规划子包</li>
- *   <li>急救 / 治疗用品(废土背景的生存医疗)</li>
+ *   <li>Anti-radiation drugs (reduce radiation dose / cumulative exposure) — links to §9.2 biosign monitor and the radiation planning subpackage</li>
+ *   <li>First aid / treatment supplies (wasteland survival medicine)</li>
  * </ul>
  */
 public final class ModMedicalItems {
     private ModMedicalItems() {}
 
-    /** 由 {@link ModRegistries#register(IEventBus)} 统一调用,请勿单独调用。 */
+    /** Called centrally by {@link ModRegistries#register(IEventBus)}; do not call directly. */
     public static void register() {
-        // TODO 设计文档补充医疗物品清单后注册
+        // TODO register medical items after the design doc refines the medical item list
     }
 }

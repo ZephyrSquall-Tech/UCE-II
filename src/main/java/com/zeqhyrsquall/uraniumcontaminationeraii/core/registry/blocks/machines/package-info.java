@@ -1,7 +1,7 @@
 /**
- * 方块注册·机器类:104 台机器方块(设计文档 §七,按 20 个工程大类分组登记)。
- * <p>注意:本聚集类是「注册只走 registry」规则的唯一例外——允许引用 content 包的机器 Block 类,
- * 但仅限注册期引用,禁止调用任何运行时方法。
- * 聚集类 {@link com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.blocks.machines.ModMachineBlocks}。</p>
+ * Block registration · machines: 104 machine blocks (design doc §7, registered in 20 engineering discipline groups).
+ * <p>Note: this aggregator class is the sole exception to the "registration only via registry" rule — it may reference machine Block classes in the content package,
+ * but only for registration-time references; calling any runtime method is forbidden.
+ * Aggregator class {@link com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.blocks.machines.ModMachineBlocks}.</p>
  */
 package com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.blocks.machines;

@@ -46,7 +46,8 @@ authors="ZeqhyrSquall"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-A Mod
+UraniumContaminationEra-II: A wasteland industrial tech mod.
+Rebuild lost civilization from ruins — manual tools, electricity, gas, nuclear, to the Eternal Coin.
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.

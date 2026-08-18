@@ -38,3 +38,11 @@ run/
 **/src/generated/**/.cache/
 repo/
 !**/src/**/repo/
+
+### Local AI assistant artifacts (Chinese docs violate English-only constraint) ###
+.claude/memory/
+.claude/skills/
+.claude/settings.local.json
+.claude/开发/
+# .claude/docs/ contains Chinese design docs; excluded until translated to English.
+.claude/docs/

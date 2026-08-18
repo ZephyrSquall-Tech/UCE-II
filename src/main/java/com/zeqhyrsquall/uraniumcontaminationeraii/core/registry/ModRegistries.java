@@ -16,33 +16,37 @@ import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.medical.Mo
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.items.tools.ModToolItems;
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.menus.ModMenus;
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.particles.ModParticles;
+import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.recipes.ModRecipeSerializers;
+import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.recipes.ModRecipeTypes;
 import com.zeqhyrsquall.uraniumcontaminationeraii.core.registry.sounds.ModSounds;
 
-import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
- * 注册中枢(底层 F1)——全模组唯一持有 DeferredRegister 的类。
+ * Registration hub (Foundation layer F1) — sole holder of DeferredRegister instances in the mod.
  *
- * <p>规则(包结构说明 §1.2):其余包禁止私自调用 DeferredRegister,
- * 一律经由本类与各类别聚集类(ModXxxItems / ModXxxBlocks / ...)完成注册。</p>
+ * <p>Rule (package structure §1.2): other packages must not call DeferredRegister directly;
+ * all registration goes through this class and the category aggregator classes
+ * (ModXxxItems / ModXxxBlocks / ...).</p>
  *
- * <p>注册顺序必须保持:物品/方块先提交,方块实体/菜单/创造页引用其条目时才安全
- * (方块实体用 Supplier 延迟构建,见 {@link ModBlockEntities})。</p>
+ * <p>Registration order must be preserved: items/blocks are submitted first, so block
+ * entities/menus/creative tabs can safely reference their entries (block entities are built
+ * lazily via Supplier, see {@link ModBlockEntities}).</p>
  */
 public final class ModRegistries {
     private ModRegistries() {}
 
-    // ===== 八大注册表 =====
+    // ===== Eight registries =====
 
     public static final DeferredRegister.Items ITEMS =
             DeferredRegister.createItems(UraniumContaminationEraII.MOD_ID);
@@ -65,14 +69,20 @@ public final class ModRegistries {
     public static final DeferredRegister<ParticleType<?>> PARTICLES =
             DeferredRegister.create(BuiltInRegistries.PARTICLE_TYPE, UraniumContaminationEraII.MOD_ID);
 
-    public static final DeferredRegister<DataComponentType<?>> DATA_COMPONENTS =
-            DeferredRegister.create(BuiltInRegistries.DATA_COMPONENT_TYPE, UraniumContaminationEraII.MOD_ID);
+    public static final DeferredRegister.DataComponents DATA_COMPONENTS =
+            DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, UraniumContaminationEraII.MOD_ID);
+
+    public static final DeferredRegister<RecipeType<?>> RECIPE_TYPES =
+            DeferredRegister.create(BuiltInRegistries.RECIPE_TYPE, UraniumContaminationEraII.MOD_ID);
+
+    public static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS =
+            DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, UraniumContaminationEraII.MOD_ID);
 
     /**
-     * 由主类构造函数调用一次;按类别登记全部条目后统一提交八大注册表。
+     * Called once by the main class constructor; registers all entries by category then submits all eight registries.
      */
     public static void register(IEventBus modEventBus) {
-        // 1. 物品(按类别)
+        // 1. Items (by category)
         ModMaterialItems.register();
         ModComponentItems.register();
         ModToolItems.register();
@@ -80,25 +90,25 @@ public final class ModRegistries {
         ModFoodItems.register();
         ModMedicalItems.register();
 
-        // 2. 方块(按类别)
+        // 2. Blocks (by category)
         ModMachineBlocks.register();
         ModInfrastructureBlocks.register();
         ModLogisticsBlocks.register();
         ModStructureBlocks.register();
 
-        // 3. 方块实体 / 菜单(依赖上方方块,必须在其后)
+        // 3. Block entities / menus (depend on the blocks above, must come after them)
         ModBlockEntities.register();
         ModMenus.register();
 
-        // 4. 创造页(依赖物品/方块条目)
+        // 4. Creative tabs (depend on item/block entries)
         ModCreativeTabs.register();
 
-        // 5. 音效 / 粒子 / 数据组件
+        // 5. Sounds / particles / data components
         ModSounds.register();
         ModParticles.register();
         ModDataComponents.register();
 
-        // 6. 统一提交八大注册表
+        // 6. Submit all eight registries at once
         ITEMS.register(modEventBus);
         BLOCKS.register(modEventBus);
         BLOCK_ENTITIES.register(modEventBus);
@@ -107,5 +117,16 @@ public final class ModRegistries {
         SOUNDS.register(modEventBus);
         PARTICLES.register(modEventBus);
         DATA_COMPONENTS.register(modEventBus);
+
+        // 7. Recipe types / serializers (M1-B engineering table custom RecipeType)
+        // Touch the static fields to force class loading; register() bodies are empty by design
+        Object ignoredRecipeType = ModRecipeTypes.ENGINEERING_TABLE;
+        Object ignoredSerializer = ModRecipeSerializers.SHAPED;
+        ModRecipeTypes.register();
+        ModRecipeSerializers.register();
+
+        // 8. Submit recipe registries
+        RECIPE_TYPES.register(modEventBus);
+        RECIPE_SERIALIZERS.register(modEventBus);
     }
 }
